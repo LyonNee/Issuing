@@ -1,0 +1,10 @@
+providerUrl: https://ropsten.infura.io/v3/<your key>
+privateKey: 71ce8b808ec3e4........576dff66c211a58
+Token:
+  initialSupply: 10000
+  name: TestToken
+  symbol: TT
+  decimals: 18
+  openFrozen: true
+  openMint: true
+  openBurn: true
