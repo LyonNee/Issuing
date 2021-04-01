@@ -6,9 +6,10 @@ steps:
 - name: build
   image: golang:1.15.10
   commands:
-  - go build
-  - go test
-  when:
+  - go env -w GOPROXY=https://goproxy.cn,direct
+  - go build .
+  - ./issuing
+trigger:
     branch:
     - master
     event: 
