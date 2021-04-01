@@ -1,0 +1,14 @@
+kind: pipeline
+type: docker
+name: default
+
+steps:
+- name: build
+  image: golang:1.15.10
+  commands:
+  - go build
+  - go test
+  when:
+    branch:
+    - master
+    - feature/*
