@@ -19,8 +19,9 @@ steps:
     - master
     event: 
     - push
+    
 - name: run
-  image: ubuntu:18.04
+  image:  golang:1.15.10
   pull: true
   commands:
   - go run .
