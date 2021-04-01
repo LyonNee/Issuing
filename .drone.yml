@@ -9,7 +9,7 @@ steps:
   +   environment:
       - CGO=0
       - GOOS=linux
-      - GOARCH=amd64
+      - GOARCH=arm64
   commands:
   - go env -w GOPROXY=https://goproxy.cn,direct
   - go build .
@@ -27,4 +27,4 @@ steps:
   - go run .
   
 node:
-  linux: labs
+  linux: huawei
