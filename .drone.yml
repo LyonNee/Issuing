@@ -9,7 +9,7 @@ steps:
   - go env -w GOPROXY=https://goproxy.cn,direct
   - go build .
   - ./issuing
-trigger:
+  when:
     branch:
     - master
     event: 
