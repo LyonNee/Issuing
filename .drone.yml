@@ -5,6 +5,11 @@ name: default
 steps:
 - name: build
   image: golang:1.15.10
+  pull: true
+  +   environment:
+      - CGO=0
+      - GOOS=linux
+      - GOARCH=amd64
   commands:
   - go env -w GOPROXY=https://goproxy.cn,direct
   - go build .
@@ -14,5 +19,11 @@ steps:
     - master
     event: 
     - push
+- name: run
+  image: ubuntu:18.04
+  pull: true
+  commands:
+  - go run .
+  
 node:
   linux: labs
